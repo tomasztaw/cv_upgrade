@@ -7,6 +7,8 @@
     <title>CV</title>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+
   </head>
 
   <body>
@@ -38,7 +40,8 @@
                 class="address-icon circle"
                 src="images/phone.png"
                 alt=""
-              /><b>Numer telefonu:</b>
+              /><b data-lang="pl">Numer telefonu:</b>
+              <b data-lang="en" style="display: none;">Phone number</b>
               <a class="contact-link" href="tel:+48572756766">
                 +48 572 756 766</a
               >
@@ -47,24 +50,18 @@
               <img class="address-icon circle" src="images/mail.png" alt="" /><b
                 >Email:</b
               >
-              <a
-                class="contact-link"
-                href="mailto:tomasz.wegrzyn.wro@gmail.com"
-              >
-                tomasz.wegrzyn.wro@gmail.com</a
-              >
+              <a class="contact-link" href="mailto:tomasz.wegrzyn.wro@gmail.com">tomasz.wegrzyn.wro@gmail.com</a>
             </li>
             <li>
-              <img
-                class="address-icon circle"
-                src="images/birthday-cake.png"
-                alt=""
-              /><b>Data urodzenia:</b> 1985-06-17
+              <img class="address-icon circle" src="images/birthday-cake.png" alt=""/>
+              <b data-lang="pl">Data urodzenia:</b> 
+              <b data-lang="en" style="display: none;">Date of birth:</b> 
+              1985-06-17
             </li>
             <li>
-              <img class="address-icon circle" src="images/pin.png" alt="" /><b
-                >Miejsce zamieszkania:</b
-              >
+              <img class="address-icon circle" src="images/pin.png" alt="" />
+              <b data-lang="pl">Miejsce zamieszkania:</b>
+              <b data-lang="en" style="display: none;">Residence:</b>
               Wrocław
             </li>
           </ul>
@@ -73,7 +70,8 @@
 
       <main>
         <section>
-          <h2>O mnie</h2>
+          <h2 data-lang="pl">O mnie</h2>
+          <h2 data-lang="en" style="display: none;">About me</h2>
 
           <p class="about">
             Jestem ambitnym i pełnym pasji adeptem programowania, który od ponad
@@ -119,20 +117,20 @@
         </section>
 
         <section>
-          <h2>Doświadczenie zawodowe</h2>
+          <h2 data-lang="pl">Doświadczenie zawodowe</h2>
+          <h2 data-lang="en" style="display: none;">Experience</h2>
           <ul>
             <li>
               2012-2022
-              <a class="git-link" href="http://polonit.pl/pl/"
-                >Polonit Sales sp. z o.o.</a
-              >
+              <a class="git-link" href="http://polonit.pl/pl/">Polonit Sales sp. z o.o.</a>
             </li>
             <li>2007-2012 RBK sp. z o.o.</li>
           </ul>
         </section>
 
         <section>
-          <h2>Języki</h2>
+          <h2 data-lang="pl">Języki</h2>
+          <h2 data-lang="en" style="display: none;">Languages</h2>
           <ul>
             <li>Polski - ojczysty</li>
             <li>Angielski - B1</li>
@@ -168,14 +166,13 @@
         </section>
 
         <section>
-          <h2>Wykształcenie</h2>
+          <h2 data-lang="pl">Wykształcenie</h2>
+          <h2 data-lang="en" style="display: none;">Education</h2>
           <ul>
             <li>
               2004-2006:
               <a class="git-link" href="https://www.uni.opole.pl/"
-                >Uniwersytet Opolski</a
-              >
-              - Historia (zaocznie)
+                >Uniwersytet Opolski</a> - Historia (zaocznie)
             </li>
             <li>
               2000-2004:
@@ -191,7 +188,8 @@
         </section>
 
         <section>
-          <h2>Zainteresowania</h2>
+          <h2 data-lang="pl">Zainteresowania</h2>
+          <h2 data-lang="en" style="display: none;">Hobbies</h2>
           <ul class="hobbies">
             <li>
               <img src="images/badminton.png" alt="" />
@@ -238,12 +236,21 @@
           </ul>
         </section>
 
+        <div>
+            <button onclick="changeLanguage('pl')">Polski</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+
         <div class="end">
-          <p>
+          <p data-lang="pl">
             <i
               >Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
               prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</i
             >
+          </p>
+          <p data-lang="en" style="display: none;">
+            <i>I consent to the processing of my personal data for the purpose of recruiting 
+                for the position I am applying for.</i>
           </p>
         </div>
       </main>

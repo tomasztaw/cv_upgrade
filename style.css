@@ -1,3 +1,7 @@
+:root {
+    --link-color: #053352;
+}
+
 body {
     background-color: aliceblue;
     font-family: Arial;
@@ -148,19 +152,19 @@ p {
 }
 
 .contact-link {
-    color: #FF5733;
+    color: var(--link-color);
     text-decoration: none;
-    border-bottom: 1px dashed #FF5733;
+    border-bottom: 1px dashed var(--link-color);
     transition: color 0.3s, border-bottom 0.3s;
 }
 
 .contact-link:hover {
-    color: #E60000;
-    border-bottom: 1px solid #E60000;
+    color: var(--link-color);
+    border-bottom: 1px solid var(--link-color);
 }
 
 a.git-link {
-    color: #053352;
+    color: var(--link-color);
     text-decoration: none;
     position: relative;
 }
