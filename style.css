@@ -1,0 +1,231 @@
+body {
+    background-color: aliceblue;
+    font-family: Arial;
+    padding: 40px 0;
+}
+
+.container {
+    box-shadow: 0 0 20px grey;
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    margin-top: 5px;
+}
+
+span {
+    color: green;
+}
+
+.profile-picture {
+    width: auto; 
+    height: 250px;
+    margin-left: 5px;
+    margin-top: 5px;
+    /* border: 6px solid gray; */
+    padding: 10px;
+    border-radius: 8%;
+}
+
+section, header {
+    padding: 10px 60px 20px 60px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+header ul {
+    list-style: none;
+}
+
+.header-center {
+    margin-left: 20px;
+}
+
+header li {
+    display: flex;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.address-icon {
+    width: 16px;
+    height: 16px;
+    background-color: cornflowerblue;
+    margin-right: 10px;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.hobbies {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hobbies li {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.hobbies div {
+    margin-left: 20px;
+}
+
+.hobbies p {
+    color: gray;
+}
+
+p {
+    line-height: 1.5;
+}
+
+
+.about {
+    text-indent: 20px;
+    font-size: 15px;
+}
+
+p.about {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.cv-download-link {
+    border: 2px solid cornflowerblue;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 26px;
+    transition: background-color 1.0s, color 1.0s;
+    box-shadow: 0 0 20px grey;
+}
+
+.cv-download-link:hover {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.cv-download-link:focus {
+    /*outline: none; /*może być z tym problem*/
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.cv-download-link:active {
+    text-decoration: underline;
+}
+
+.contact-link {
+    color: #FF5733;
+    text-decoration: none;
+    border-bottom: 1px dashed #FF5733;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.contact-link:hover {
+    color: #E60000;
+    border-bottom: 1px solid #E60000;
+}
+
+a.git-link {
+    color: #053352;
+    text-decoration: none;
+    position: relative;
+}
+
+a.git-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #146296;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+a.git-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+address li b {
+    margin-right: 5px;
+}
+
+.end p {
+    font-size: 10px;
+    padding: 10px 60px 20px 60px;
+    text-align: center;
+}
+
+.git-png {
+    width: 70px;
+    height: auto;
+    margin-left: 35px;
+}
+
+.baner-png {
+    width: 150px;
+    height: auto;
+}
+
+.git-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+/* telefon */
+@media screan and (max-width: 767px) {
+    
+}
+
+/* tablet */
+@media screan and (min-width: 768px) and (max-width: 1199px) {
+    
+}
+
+/* desktop */
+@media screan and (min-width: 1200px) {
+    
+}
+
