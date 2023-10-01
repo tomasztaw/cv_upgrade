@@ -3,14 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>CV</title>
-
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js"></script>
-
   </head>
-
   <body>
     <div class="container">
       <header>
@@ -19,20 +15,29 @@
           src="images/photo.jpg"
           alt="Zdjęcie profilowe"
         />
-
         <div class="header-center">
           <h1>Tomasz Aleksander Węgrzyn</h1>
           <span>Java Junior Developer</span>
           <div>
-            <a
+            <a data-lang="pl"
               class="cv-download-link"
               href="https://store2.gofile.io/download/00794a1a-3210-46da-82d1-2d7dbbd18952/cv.pdf"
               target="_blank"
               >Pobierz CV</a
             >
+            <a data-lang="en" style="display: none;"
+              class="cv-download-link"
+              href="https://store2.gofile.io/download/00794a1a-3210-46da-82d1-2d7dbbd18952/cv.pdf"
+              target="_blank"
+              >Download</a
+            >
           </div>
         </div>
-
+        <div>
+        <div class="lang-container">
+          <button id="plButton" class="language-button" onclick="changeLanguage('pl')">PL</button>
+          <button id="enButton" class="language-button" onclick="changeLanguage('en')">EN</button>
+        </div>
         <address>
           <ul>
             <li>
@@ -66,14 +71,13 @@
             </li>
           </ul>
         </address>
+        </div>
       </header>
-
       <main>
         <section>
           <h2 data-lang="pl">O mnie</h2>
           <h2 data-lang="en" style="display: none;">About me</h2>
-
-          <p class="about">
+          <p class="about" data-lang="pl">
             Jestem ambitnym i pełnym pasji adeptem programowania, który od ponad
             roku intensywnie uczy się języka Java. W trakcie mojej nauki miałem
             okazję przerobić kilka obszernych warsztatów na temat m.in:
@@ -82,7 +86,13 @@
             <b>Rest API</b>, co pozwoliło mi zdobyć solidne podstawy w tworzeniu
             oprogramowania.
           </p>
-          <p class="about">
+          <p class="about" data-lang="en" style="display: none;">
+            I am an ambitious and passionate programming student who has been intensively learning Java for over a year. During my studies, I had the opportunity to attend several extensive workshops on, among others:
+            <b>Gradle/Maven</b>, <b>Lombok</b>, <b>PSQL</b>, <b>Hibernate</b>,
+            <b>Mockito</b>, <b>Git</b>, <b>Spring</b>, <b>Spring Boot</b>,
+            <b>Rest API</b>, which allowed me to gain a solid foundation in software development.
+          </p>
+          <p class="about" data-lang="pl">
             Najwięcej do mojej nauki wniósł własny projekt. Dzięki, któremu
             mogłem przekonać się na własnej skórze znaczenia jaki ma czysty i
             skalowalny kod oraz o jego wpływie na skuteczność rozwiązywania
@@ -91,7 +101,10 @@
             praktyk przy poprawianiu mojej aplikacji i rozwiązywaniu zadań z
             platform internetowych.
           </p>
-          <p class="about">
+          <p class="about" data-lang="en" style="display: none;">
+            My own project contributed the most to my learning. Thanks to which I could see first-hand the importance of clean and scalable code and its impact on the effectiveness of problem solving using programming. Therefore, I constantly strive to improve my skills by learning new technologies and practices in improving my application and solving tasks from online platforms.
+          </p>
+          <p class="about" data-lang="pl">
             Jednym z moich najważniejszych atutów jest determinacja i zdolność
             do szybkiej adaptacji. Uważam, że programowanie to nie tylko
             rozwiązywanie problemów, ale także tworzenie innowacyjnych rozwiązań
@@ -100,7 +113,10 @@
             umiejętności i pasję do programowania w przyszłej karierze
             zawodowej.
           </p>
-          <p class="about">
+          <p class="about" data-lang="en" style="display: none;">
+            One of my most important assets is determination and the ability to adapt quickly. I believe that programming is not only about solving problems, but also about creating innovative solutions and projects. Although the road to success in this field can be bumpy, I am determined to use my skills and passion for programming in my future career.
+          </p>
+          <p class="about" data-lang="pl">
             Obecnie wciąż pracuję nad
             <a
               class="git-link"
@@ -114,8 +130,16 @@
             Moim celem jest stać się profesjonalnym programistą i tworzyć
             oprogramowanie, które ma wpływ na świat.
           </p>
+          <p class="about" data-lang="en" style="display: none;">
+            Currently I'm still working on it
+            <a
+              class="git-link"
+              href="https://github.com/tomasztaw/simple-clinic.git"
+              target="_blank"
+              >simple-clinic</a>
+            ,but at the same time I'm looking for a group project to learn how to work in a team with other programmers. I plan to continue developing my skills and explore different areas of programming such as cybersecurity and web development. My goal is to become a professional programmer and create software that impacts the world.
+          </p>
         </section>
-
         <section>
           <h2 data-lang="pl">Doświadczenie zawodowe</h2>
           <h2 data-lang="en" style="display: none;">Experience</h2>
@@ -127,23 +151,24 @@
             <li>2007-2012 RBK sp. z o.o.</li>
           </ul>
         </section>
-
         <section>
           <h2 data-lang="pl">Języki</h2>
           <h2 data-lang="en" style="display: none;">Languages</h2>
           <ul>
-            <li>Polski - ojczysty</li>
-            <li>Angielski - B1</li>
-            <li>Ukraiński - A2</li>
+            <li data-lang="pl">Polski - ojczysty</li>
+            <li data-lang="en" style="display: none;">Polish - native</li>
+            <li data-lang="pl">Angielski - B1</li>
+            <li data-lang="en" style="display: none;">English - B1</li>
+            <li data-lang="pl">Ukraiński - A2</li>
+            <li data-lang="en" style="display: none;">Ukrainian - A2</li>
           </ul>
         </section>
-
         <section style="page-break-before: always">
           <h2>GitHub</h2>
-
           <ul class="git-ul">
             <li>
-              <p>Mój profil na GitHub</p>
+              <p data-lang="pl">Mój profil na GitHub</p>
+              <p data-lang="en" style="display: none;">My profile on GitHub</p>
               <a
                 href="https://github.com/tomasztaw/tomasztaw"
                 target="_blank"
@@ -153,7 +178,8 @@
               </a>
             </li>
             <li>
-              <p>Obecnie pracuję nad</p>
+              <p data-lang="pl">Obecnie pracuję nad</p>
+              <p data-lang="en" style="display: none;">I'm currently working on</p>
               <a
                 href="https://github.com/tomasztaw/simple-clinic.git"
                 target="_blank"
@@ -164,7 +190,6 @@
             </li>
           </ul>
         </section>
-
         <section>
           <h2 data-lang="pl">Wykształcenie</h2>
           <h2 data-lang="en" style="display: none;">Education</h2>
@@ -186,7 +211,6 @@
             </li>
           </ul>
         </section>
-
         <section>
           <h2 data-lang="pl">Zainteresowania</h2>
           <h2 data-lang="en" style="display: none;">Hobbies</h2>
@@ -195,52 +219,53 @@
               <img src="images/badminton.png" alt="" />
               <div>
                 <h3>Sport</h3>
-                <p>
+                <p data-lang="pl">
                   Sport pełni ważną rolę w moim życiu i kształtuje charakter.
                   Ruch to zdrowie i endorfiny:)
                 </p>
+                <p data-lang="en" style="display: none;">Sport plays an important role in my life and shapes my character. Movement is health and endorphins:)</p>
               </div>
             </li>
             <li>
               <img src="images/code.png" alt="" />
               <div>
-                <h3>Programowanie</h3>
-                <p>
-                  Nauka prgramowania pozwala mi zagubić się w czasie i
+                <h3 data-lang="pl">Programowanie</h3>
+                <h3 data-lang="en" style="display: none;">Programming</h3>
+                <p data-lang="pl">
+                  Nauka programowania pozwala mi zagubić się w czasie i
                   przestrzeni. Są takie miesiące, że nie wychodzę z piwnicy.
                 </p>
+                <p data-lang="en" style="display: none;">Learning programming allows me to get lost in time and space. There are months when I don't leave the basement.</p>
               </div>
             </li>
             <li>
               <img src="images/crown.png" alt="" />
               <div>
-                <h3>Szachy</h3>
-                <p>
+                <h3 data-lang="pl">Szachy</h3>
+                <h3 data-lang="en" style="display: none;">Chess</h3>
+                <p data-lang="pl">
                   Przesuwanie drewnianych figurek po kawałku drewna może
                   przynieść bardzo dużo emocji i satysfakcji, a stary żart o
                   refleksie szachisty w zestawieniu z szachami szybkimi ma się
                   nijak.
                 </p>
+                <p data-lang="en" style="display: none;">Moving wooden figures on a piece of wood can bring a lot of emotion and satisfaction, and the old joke about a chess player's reflexes has nothing to do with speed chess.</p>
               </div>
             </li>
             <li>
               <img src="images/school.png" alt="" />
               <div>
-                <h3>Fizyka kwantowa</h3>
-                <p>
+                <h3 data-lang="pl">Fizyka kwantowa</h3>
+                <h3 data-lang="en" style="display: none;">Quantum physics</h3>
+                <p data-lang="pl">
                   Tak na prawdę nie mam o tym pojęcia, napisałem tak żeby lepiej
-                  wyglądało w CV.
+                  wyglądało w CV. O programowaniu też tak kiedyś myślałem, że jest nie do opanowania.
                 </p>
+                <p data-lang="en" style="display: none;">I actually have no idea about it, I wrote it to make it look better on my CV. I used to think that programming was impossible to learn.</p>
               </div>
             </li>
           </ul>
         </section>
-
-        <div>
-            <button onclick="changeLanguage('pl')">Polski</button>
-            <button onclick="changeLanguage('en')">English</button>
-        </div>
-
         <div class="end">
           <p data-lang="pl">
             <i

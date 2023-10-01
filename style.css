@@ -125,6 +125,7 @@ p {
 }
 
 .cv-download-link {
+    width: 81px;
     border: 2px solid cornflowerblue;
     color: black;
     text-decoration: none;
@@ -213,6 +214,30 @@ address li b {
     display: flex;
     justify-content: space-around;
 }
+
+.lang-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.language-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.active-language-button {
+    background-color: #0056b3;
+    color: #fff;
+}
+
 
 @media only screen and (max-width: 600px) {
 
